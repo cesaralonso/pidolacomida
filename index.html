@@ -9,10 +9,14 @@
 	<title>Pido la comida</title>
 
 	<!-- Styles -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css'>
+	
 	<link rel='stylesheet' href='assets/css/bootstrap.min.css'>
 	<link rel='stylesheet' href='assets/css/animate.min.css'>
 	<link rel='stylesheet' href="assets/css/font-awesome.min.css"/>
 	<link rel='stylesheet' href="assets/css/style.css"/>
+
+
 
 	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
@@ -24,8 +28,6 @@
 	<![endif]-->
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="#">
-</head>
 <body>
 <!-- Begin Hero Bg -->
 <div id="parallax">
@@ -90,9 +92,7 @@
 					</p>
 				</div>
 			</center>
-
 		</div>
-
 	</div>
 </div>
 </section>
@@ -212,22 +212,20 @@
 			</div>
 
 			<div class="col-md-4">
-				<a href="https://ununsplash.imgix.net/photo-1429277158984-614d155e0017?fit=crop&amp;fm=jpg&amp;h=700&amp;q=75&amp;w=1050" title="This is the description">
 					<img src="assets/img/galeria01.jpg" alt="" class="image-responsive">
 					<div class="description">
 						<span class="caption">AV. 20 DE NOVIEMBRE NO 1320 <b>87753</b></span>
 						<br>
 						<p>
 							<center>
-								<span class=""><i class="glyphicon glyphicon-earphone ico-circle"></i></span>
-								<span class=""><i class="glyphicon glyphicon-share ico-circle"></i></span>
-								<span class=""><i class="glyphicon glyphicon-heart ico-circle"></i></span>
+								<span class=""><i data-target="#ModalContact" data-toggle="modal" class="glyphicon glyphicon-earphone ico-circle"></i></span>
+								<span class=""><i data-target="#ModalShare" data-toggle="modal" class="glyphicon glyphicon-share ico-circle"></i></span>
 							</center>
 						</p>
 						<div class="clearfix"></div>
 					</div>
-				</a>
 			</div>
+
 			<div class="col-md-4">
 				<a href="https://unsplash.imgix.net/uploads/14115408840644deb16b0/2dc933e3?fit=crop&amp;fm=jpg&amp;h=700&amp;q=75&amp;w=1050" title="This is the description">
 				<img src="assets/img/galeria02.jpg" alt="" class="image-responsive">
@@ -238,7 +236,6 @@
 							<center>
 								<span class=""><i class="glyphicon glyphicon-earphone ico-circle"></i></span>
 								<span class=""><i class="glyphicon glyphicon-share ico-circle"></i></span>
-								<span class=""><i class="glyphicon glyphicon-heart ico-circle"></i></span>
 							</center>
 						</p>
 						<div class="clearfix"></div>
@@ -255,7 +252,6 @@
 							<center>
 								<span class=""><i class="glyphicon glyphicon-earphone ico-circle"></i></span>
 								<span class=""><i class="glyphicon glyphicon-share ico-circle"></i></span>
-								<span class=""><i class="glyphicon glyphicon-heart ico-circle"></i></span>
 							</center>
 						</p>
 						<div class="clearfix"></div>
@@ -272,7 +268,6 @@
 							<center>
 								<span class=""><i class="glyphicon glyphicon-earphone ico-circle"></i></span>
 								<span class=""><i class="glyphicon glyphicon-share ico-circle"></i></span>
-								<span class=""><i class="glyphicon glyphicon-heart ico-circle"></i></span>
 							</center>
 						</p>
 						<div class="clearfix"></div>
@@ -289,7 +284,6 @@
 							<center>
 								<span class=""><i class="glyphicon glyphicon-earphone ico-circle"></i></span>
 								<span class=""><i class="glyphicon glyphicon-share ico-circle"></i></span>
-								<span class=""><i class="glyphicon glyphicon-heart ico-circle"></i></span>
 							</center>
 						</p>
 						<div class="clearfix"></div>
@@ -306,7 +300,6 @@
 							<center>
 								<span class=""><i class="glyphicon glyphicon-earphone ico-circle"></i></span>
 								<span class=""><i class="glyphicon glyphicon-share ico-circle"></i></span>
-								<span class=""><i class="glyphicon glyphicon-heart ico-circle"></i></span>
 							</center>
 						</p>
 						<div class="clearfix"></div>
@@ -382,7 +375,7 @@
 				<div class="maintitle">
 					<center><h2>Busqueda</h2></center>
 					<div class="form-group col-sm-6 col-xs-12">
-						 <label for="sel1">Ciudad:</label>
+						 <label for="sel1">Restaurante:</label>
 						 <select class="form-control" id="sel1">
 							 <option>1</option>
 							 <option>2</option>
@@ -392,8 +385,8 @@
 					</div>
 
 					<div class="form-group col-sm-6 col-xs-12">
-						 <label for="sel1">Fraccionamiento:</label>
-						 <select class="form-control" id="sel1">
+						 <label for="sel1">Platillo:</label>
+						 <select class="form-control" id="sel2">
 							 <option>1</option>
 							 <option>2</option>
 							 <option>3</option>
@@ -402,59 +395,76 @@
 					</div>
 
 					<div class="form-group col-sm-6 col-xs-12">
-						 <label for="sel1">Habitaciones:</label>
-						 <select class="form-control" id="sel1">
+						 <label for="sel1">Ingredientes:</label>
+						 <select class="form-control" id="sel3">
 							 <option>1</option>
 							 <option>2</option>
 							 <option>3</option>
 							 <option>4</option>
 						 </select>
 					</div>
+
+					<!--Range Slider-->
 
 					<div class="form-group col-sm-6 col-xs-12">
-						 <label for="sel1">Baños:</label>
-						 <select class="form-control" id="sel1">
-							 <option>1</option>
-							 <option>2</option>
-							 <option>3</option>
-							 <option>4</option>
-						 </select>
+						<label for="sel1">Precio $</label>						
+						<div slider>
+							<div>
+								<div inverse-left style="width:70%;"></div>
+								<div inverse-right style="width:70%;"></div>
+								<div range style="left:40%;right:40%;"></div>
+								<span thumb style="left:40%;"></span>
+								<span thumb style="left:60%;"></span>
+								<div sign style="left:40%;">
+									<span id="value">40</span>	
+								</div>
+								<div sign style="left:60%;">
+									<span id="value">60</span>
+								</div>
+							</div>
+							<input id="slider1" type="range" tabindex="0" value="40" max="100" min="0" step="1" oninput="slider1()" />									
+							<input id="slider2" type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="slider2()" />
+						</div>						
 					</div>
 
+					
 
-					<div id="slidecontainer" class="col-sm-6 col-xs-12">
-					  <input type="range" min="1" max="100" value="50" class="slider1" id="myRange">
-					  <p>Value: <span id="demo"></span></p>
+					
+
+					<!--
+					<input id="ex12b" type="text"/><br/>
+
+					
+					<b>€ 10</b> <input id="ex2" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> <b>€ 1000</b>
+					
+					<div data-role="rangeslider">
+							<label for="range-1a">Precio:</label>
+							<input type="range" name="range-1a" id="range-1a" min="0" max="100" value="40" data-popup-enabled="true" data-show-value="true">
+							<label for="range-1b">Rangeslider:</label>
+							<input type="range" name="range-1b" id="range-1b" min="0" max="100" value="80" data-popup-enabled="true" data-show-value="true">
 					</div>
 
-					<div id="slidecontainer" class="col-sm-6 col-xs-12">
-					  <input type="range" min="1" max="100" value="50" class="slider2" id="Range2">
-					  <p>Value: <span id="number2"></span></p>
+					
+					<div class="col-sm-10">
+						<b>$10</b>
+						<input id="ex2" type="range" class="slider" min="0" max="1000" step="5" value="[250,450]"/>
+						<b>$1000</b>
+						<p>$ <span id="valueSlider"></span></p>
 					</div>
 
 					<script>
-						var slider2 = document.getElementById("Range2");
-						var output2 = document.getElementById("number2");
-						output2.innerHTML = slider2.value;
+						var sliderVal = document.getElementById('valueSlider');
+						var slid = document.getElementById('ex2')
 
-						slider2.oninput = function()
+						sliderVal.innerHTML = slid.value;
+
+						slid.oninput = function()
 						{
-						  output2.innerHTML = this.value;
+						  sliderVal.innerHTML = this.value;
 						}
-					</script>
+					</script>-->
 
-					<script>
-						var slider1 = document.getElementById("myRange");
-						var output1 = document.getElementById("demo");
-						output1.innerHTML = slider1.value;
-
-						slider1.oninput = function()
-						{
-						  output1.innerHTML = this.value;
-						}
-					</script>
-
-					<input type="submit" data-inline="true" value="BUSCAR" class="btn-blue">
+					<input id="btnSearch" type="submit" data-inline="true" value="BUSCAR" class="btn btn-blue" onclick="values">
 
 				</div>
 			</div>
@@ -693,9 +703,142 @@
 
 
 </section>
+
+<!--Modals-->
+<div class="modal fade" id="ModalShare">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					&times;
+				</button>
+				<h5 class="modal-title">Compartir</h5>
+			</div>
+			<div class="modal-body">
+				<br>
+				<div class="row">
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-2">
+						<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.mediotiempo.com" target="_blank">
+						    <i style="color: blue;"class="fa fa-facebook fa-5x"></i>
+						</a>
+					</div>
+					<div class="col-md-4">
+					</div>
+					<div class="col-md-4">
+						<a href="#" onclick="hideShow()"><i id="envelope" class="fa fa-envelope fa-5x" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-6">
+					</div>
+					<div class="col-md-6" >
+						<div class="row">
+							<div class="col-md-9 showInModal" style="display:none;">
+								<input class="form-control" type="text" placeholder="Introduzca su e-mail">
+							</div>
+							<div class="col-md-3">
+								<button class="btn btn-primary showInModal" style="display:none;"><i style="color: white;" class="fa fa-paper-plane" aria-hidden="true"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="ModalContact">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					&times;
+				</button>
+				<h5 class="modal-title">Pedir</h5>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-6">
+						<img style="width: 100%;" src="assets/img/galeria01.jpg" alt="" class="img-thumbnail">
+					</div>
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-12">
+								<h4 style="color:black">Restaurante La María</h4>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<h3 style="color:black">Plato de camarones</h3>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-12">
+								<h1 style="color:black">$15.00MXN</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<br>
+						<p style="color:black">Ricos camarones bañados en salsa de soya acompañados de ajonjolí y sus especias preferidas.</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secundary btn-lg btnPedir"> pedir</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 <!-- Bootstrap core JavaScript
 	================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+
+
+<!-- Here we get the values of each slider -->
+<script>
+	//Here we get the value of the smallest slider
+	function slider1() {
+		var valueS1 = document.getElementById('slider1');
+		var valueS2 = document.getElementById('slider2');
+		valueS1.value = Math.min(valueS1.value,valueS2.value-1);
+		var children = valueS1.parentNode.childNodes[1].childNodes;
+		children[1].style.width=valueS1.value+'%';
+		children[5].style.left=valueS1.value+'%';
+		children[7].style.left=valueS1.value+'%';children[11].style.left=valueS1.value+'%';
+		children[11].childNodes[1].innerHTML=valueS1.value;
+	}
+
+	//Here we get the value of the highest slider
+	function slider2(){
+		var valueS1 = document.getElementById('slider1');
+		var valueS2 = document.getElementById('slider2');
+		valueS2.value = Math.max(valueS1.value-(-1),valueS2.value);
+		var children = valueS2.parentNode.childNodes[1].childNodes;
+		children[3].style.width=(100-valueS2.value)+'%';
+		children[5].style.right=(100-valueS2.value)+'%';
+		children[9].style.left=valueS2.value+'%';children[13].style.left=valueS2.value+'%';
+		children[13].childNodes[1].innerHTML=valueS2.value;
+	}
+
+	function hideShow() {
+			$('.showInModal').slideToggle();
+	}
+</script>
+
+ <!--Range slide-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.min.js"></script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/waypoints.min.js"></script>
@@ -704,5 +847,16 @@
 <script src="assets/js/jquery.magnific-popup.min.js"></script>
 <script src="assets/js/validate.js"></script>
 <script src="assets/js/common.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$('.btnPedir').hover(function(){
+			$('.btnPedir').css({color: 'orange', background: '#F5D0A9'});
+		});
+		$('.btnPedir').mouseleave(function() {
+			$('.btnPedir').css({color: 'white', background: 'orange'});
+		});
+	});
+</script>
 </body>
 </html>
